@@ -1,6 +1,6 @@
 locals {
   # Add 'o' to prevent name conflict with Tensio's EnergiMidt tenant. Key vault names must be globally unique.
-  name     = var.override_name == null ? "${var.system_short_name}-${var.app_name}o-${lower(var.environment)}-kv" : var.override_name
+  name     = var.override_name == null ? "${var.system_short_name}-${var.app_name}-${lower(var.environment)}-kv" : var.override_name
   location = var.override_location == null ? var.resource_group.location : var.override_location
 }
 
